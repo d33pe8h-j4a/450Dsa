@@ -9,6 +9,7 @@ int main()
 	    vector<int> a(n);
 	    for (auto &x:a) cin >> x;
 	    for (int i = n - 1; i >= 0; i--) cout << a[i] << " "; cout << endl;
+		cout << "Thank You" << endl;
 	}
 	return 0;
 }

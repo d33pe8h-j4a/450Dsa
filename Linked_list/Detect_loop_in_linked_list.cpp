@@ -63,6 +63,18 @@ class Solution
         return false;
         
     }
+    bool detectLoop_Map_method(Node* head) 
+    {
+        if (head == NULL) return false;
+        map<Node*, bool> visited;
+        Node* temp = head;
+        while (temp)
+        {
+            if (visited[temp]) return true;
+            visited[temp] = true;
+        }
+        return false;
+    }
 };
 
 
@@ -93,7 +105,7 @@ int main()
         loopHere(head,tail,pos);
         
         Solution ob;
-        if(ob.detectLoop(head) )
+        if(ob.detectLoop_Map_method(head) )
             cout<< "True\n";
         else
             cout<< "False\n";
